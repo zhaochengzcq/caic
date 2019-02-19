@@ -1,0 +1,10 @@
+{
+  "birthday-picker": "./src/birthday-picker",
+  "car-number-keyboard": "./src/car-number-keyboard",
+  "cell-stepper": "./src/cell-stepper",
+  "cell-switch": "./src/cell-switch",
+  "date-picker": "./src/date-picker",
+  "common-picker": "./src/common-picker",
+  "sex-radio": "./src/sex-radio",
+  "index": "./src/index.js"
+}

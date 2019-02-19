@@ -1,0 +1,18 @@
+
+// 函数 px-->vw 以iPhone6为基准
+pxToVW(font_size-px)
+  ((font_size-px / 375) * 100)vw
+// 函数 px-->vh 以iPhone6为基准
+pxToVH(font_size-px)
+  ((font_size-px / 375) * 100)vh
+//由于设置字体大小的函数
+changeFontSize(font_size-px)
+  font-size: pxToVW(font_size-px)
+
+  @media screen and (max-width: 375px)
+    font-size: font_size-px
+
+  @media screen and (min-width: 414px)
+    font-size: (font_size-px/375)*414px
+
+[class*=van-hairline] {}
