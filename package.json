@@ -1,6 +1,6 @@
 {
   "name": "caic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于vant二次封装的vue插件",
   "author": {
     "name": "ZhaoCheng",

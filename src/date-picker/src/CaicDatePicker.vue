@@ -132,7 +132,7 @@ export default {
     // dateTimePicker 的默认显示值；
     defaultDate: {
       type: Date,
-      default: new Date()
+      default: function () { return new Date() }
     },
     // van-datetime-picker的起始日期，日期可选时，必填；日期不可选时，此属性不生效
     minDate: Date,
