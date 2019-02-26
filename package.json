@@ -1,6 +1,6 @@
 {
   "name": "caic",
-  "version": "1.0.1",
+  "version": "1.0.12",
   "description": "基于vant二次封装的vue插件",
   "author": {
     "name": "ZhaoCheng",
@@ -35,7 +35,7 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "user": "0.0.0",
-    "vant": "^1.6.2",
+    "vant": "^1.6.5",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

@@ -45,6 +45,11 @@ export default {
   created () {
     this.defSex = this.defaultSex
   },
+  watch: {
+    defaultSex: function () {
+      this.defSex = this.defaultSex
+    }
+  },
   methods: {
     returnMsg: function (sexCode) {
       this.$emit('getMsg', sexCode)

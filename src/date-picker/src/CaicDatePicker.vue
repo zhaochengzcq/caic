@@ -4,11 +4,13 @@
       <van-field v-model="effectiveDate"
                  :readonly='true'
                  :border='border'
+                 :label="label"
+                 :label-align='labelAlign'
                  :input-align="inputAlign"
                  :disabled="disabled"
                  @click="selDate">
-        <div slot="label"
-             :class="{'date-title':boldTitle}">起保日期</div>
+        <!-- <div slot="label"
+             :class="{'date-title':boldTitle}">起保日期</div> -->
         <div slot="right-icon"
              :class="{'display-none':!isSel}"
              @click="selDate">
@@ -71,6 +73,7 @@
  *  18.disabled Boolean 是否禁用输入框 --false
  *  19.boldTitle (boolean) title是否加粗显示 false
  *  20.v-model (String) 显示框的默认值
+ *  21.label (String) title
  * 
  *  21.@confirm() Function 点击完成按钮时触发的事件 回传数值 dateObject--日期对象, formatedDate--格式化后的日期
  *  22.@cancel() Function 点击取消按钮时触发的事件
@@ -103,6 +106,10 @@ export default {
       type: String,
       required: true
     },
+    //输入框左侧文本
+    label: {
+      type: String,
+    },
     // label加粗
     boldTitle: {
       type: Boolean,
@@ -113,12 +120,10 @@ export default {
       default: true
     },
     labelAlign: {
-      type: String,
-      default: 'left'
+      type: String
     },
     inputAlign: {
-      type: String,
-      default: 'left'
+      type: String
     },
     disabled: {
       type: Boolean,

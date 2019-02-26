@@ -47,6 +47,7 @@ export default {
    * isLink : Boolean 是否展示右侧箭头并开启点击反馈 默认--false
    * v-model: String|Number stepper初始值
    * disabled Boolean stepper是否禁用 默认--false
+   * disableInput Boolean 是否禁用输入框 false
    * min: String | Number stepper最小值 默认1
    * max: String | Number stepper最大值
    * step: String | Number stepper步数 默认1

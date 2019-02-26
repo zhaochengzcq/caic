@@ -3,17 +3,18 @@
     <van-field v-model="birthday"
                :readonly='true'
                :border="border"
+               label='出生日期'
                :label-align="labelAlign"
                :input-align="inputAlign"
                :disabled="disabled"
                placeholder="请选择出生日期"
                @click="selBirthday">
-      <div slot="label"
+      <!-- <div slot="label"
            :class="{'date-title':boldTitle}">
         <span>
           出生日期
         </span>
-      </div>
+      </div> -->
       <div slot="right-icon">
         <slot name="right-icon">
           <span class=""
@@ -62,6 +63,8 @@
  * 16.inputAlign String 输入框内容对齐方式，可选值为left center right left
  * 17.disabled Boolean 是否禁用输入框 --false
  * 17.right-icon 自定义右侧图标，有默认图标
+ * ***************v1.0.1******************
+ * v-model 设置field显示的初始值
  * ***************doing********************
  * 如何传入自定义事件? 离焦事件 (暂不实现)
  * ***************except*******************
@@ -81,7 +84,11 @@ Vue.use(Field).use(Popup).use(DatetimePicker)
 export default {
   name: 'caic-birthday-picker',
   props: {
-
+    // field初始值
+    value: {
+      type: [String, Number],
+      default: ''
+    },
     // 标题加粗样式
     boldTitle: {
       type: Boolean,
@@ -92,12 +99,10 @@ export default {
       default: true
     },
     labelAlign: {
-      type: String,
-      default: 'left'
+      type: String
     },
     inputAlign: {
-      type: String,
-      default: 'left'
+      type: String
     },
     disabled: {
       type: Boolean,
@@ -158,7 +163,7 @@ export default {
   },
   data () {
     return {
-      birthday: null,
+      birthday: this.value,
       birthdayObject: null,
       comparedDate: null,
       age: null,
@@ -168,16 +173,15 @@ export default {
       maxDate: new Date()
     }
   },
-  created () {
-  },
-  mounted () {
-  },
   watch: {
     baseDate: function () {
       if (this.birthday !== null && this.birthday !== undefined && this.birthday !== '') {
         this.getAge()
         this.returnMsg(this.birthdayObject, this.birthday, this.age, this.birthDays)
       }
+    },
+    value: function () {
+      this.birthday = this.value
     }
   },
   methods: {

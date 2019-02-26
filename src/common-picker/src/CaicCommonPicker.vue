@@ -1,9 +1,9 @@
 <template>
   <div id="caic-common-picker">
     <van-field v-model="value"
-               :label="label"
                is-link
-               :readOnly="true"
+               :label="label"
+               :readonly="true"
                :border="border"
                :label-align="labelAlign"
                :input-align="inputAlign"
@@ -82,12 +82,10 @@ export default {
       default: true
     },
     labelAlign: {
-      type: String,
-      default: 'left'
+      type: String
     },
     inputAlign: {
-      type: String,
-      default: 'left'
+      type: String
     },
 
     placeholder: {
@@ -118,7 +116,6 @@ export default {
       type: Array,
       required: true
     }
-
   },
   data () {
     return {
