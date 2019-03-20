@@ -33,7 +33,7 @@ import {组件名称} from 'caic'
 
 ## 组件
 
-### ​BirthdayPicker  --选择出身日期
+### BirthdayPicker  --选择出身日期
 
 **使用**
 
@@ -48,22 +48,23 @@ Vue.use(BirthdayPicker)
 
 **说明**
 
-| 参数                  | 说明                                             | 类型    | 默认值     | 是否必传 | 其他 |
-| --------------------- | :----------------------------------------------- | ------- | ---------- | -------- | ---- |
-| border                | *是否显示内边框*                                 | Boolean | true       | no       |      |
-| *label-align*         | *文本对齐方式，可选值为left center right *       | String  | left       | no       |      |
-| *input-align*         | *输入框内容对齐方式，可选值为left center right * | String  | left       | no       |      |
-| *blod-title*          | *是否加粗label*                                  | Boolean | false      | no       |      |
-| disabled              | *是否禁用输入框*                                 | Boolean | false      |          |      |
-| default-value         | 选择器默认显示的日期                             | Date    | 当前日期   | no       |      |
-| min-date              | 可选的最小时间                                   | Date    | 100年前    | no       |      |
-| date-format-rule      | 显示及返回日期的格式                             | String  | YYYY-DD-MM | no       |      |
-| type                  | 类型，可选值为date,time,year-month，datetime     | String  | date       | no       |      |
-| base-date             | 根据此日期进行年龄计算                           | Date    | 当前日期   | no       |      |
-| *confirm-button-text* | *确认按钮文字*                                   | String  | *确认*     | no       |      |
-| *cancel-button-text*  | *取消按钮文字*                                   | String  | *取消*     | no       |      |
-| *visible-item-count*  | *可见的选项个数*                                 | Number  | 5          | no       |      |
-| *item-height*         | *选项高度*                                       | Number  | 44         | no       |      |
+| 参数                  | 说明                                             | 类型           | 默认值     | 是否必传 | 其他 |
+| --------------------- | :----------------------------------------------- | -------------- | ---------- | -------- | ---- |
+| v-model               | 设置显示框的默认值                               | String\|Number | ''         | no       |      |
+| border                | *是否显示内边框*                                 | Boolean        | true       | no       |      |
+| *label-align*         | *文本对齐方式，可选值为left center right *       | String         | left       | no       |      |
+| *input-align*         | *输入框内容对齐方式，可选值为left center right * | String         | left       | no       |      |
+| *blod-title*          | *是否加粗label*                                  | Boolean        | false      | no       |      |
+| disabled              | *是否禁用输入框*                                 | Boolean        | false      |          |      |
+| default-value         | 选择器默认显示的日期                             | Date           | 当前日期   | no       |      |
+| min-date              | 可选的最小时间                                   | Date           | 100年前    | no       |      |
+| date-format-rule      | 显示及返回日期的格式                             | String         | YYYY-DD-MM | no       |      |
+| type                  | 类型，可选值为date,time,year-month，datetime     | String         | date       | no       |      |
+| base-date             | 根据此日期进行年龄计算                           | Date           | 当前日期   | no       |      |
+| *confirm-button-text* | *确认按钮文字*                                   | String         | *确认*     | no       |      |
+| *cancel-button-text*  | *取消按钮文字*                                   | String         | *取消*     | no       |      |
+| *visible-item-count*  | *可见的选项个数*                                 | Number         | 5          | no       |      |
+| *item-height*         | *选项高度*                                       | Number         | 44         | no       |      |
 
 ------
 
@@ -148,19 +149,20 @@ Vue.use(CellStepper)
 
 **说明**
 
-| 参数      | 说明                           | 类型             | 默认值 | 是否必传 | 其他 |
-| --------- | ------------------------------ | ---------------- | ------ | -------- | ---- |
-| title     | 展示框的标题                   | String \| Number | ——     | no       |      |
-| content   | 展示框的值                     | String \| Number | ——     | no       |      |
-| label     | 标题下方的描述信息             | String           | ——     | no       |      |
-| border    | 是否显示边框                   | Boolean          | true   | no       |      |
-| clickable | 是否开启点击反馈               | Boolean          | false  | no       |      |
-| is-link   | 是否展示右侧箭头并开启点击反馈 | Boolean          | false  | no       |      |
-| v-model   | stepper当前输入值              | String \| Number | 最小值 | no       |      |
-| disabled  | stepper是否禁用                | Boolean          | false  | no       |      |
-| min       | stepper最小值                  | String \| Number | 1      | no       |      |
-| max       | stepper最大值                  | String \| Number | ——     | no       |      |
-| step      | stepper步数                    | String \| Number | 1      | no       |      |
+| 参数            | 说明                           | 类型             | 默认值 | 是否必传 | 其他 |
+| --------------- | ------------------------------ | ---------------- | ------ | -------- | ---- |
+| title           | 展示框的标题                   | String \| Number | ——     | no       |      |
+| content         | 展示框的值                     | String \| Number | ——     | no       |      |
+| label           | 标题下方的描述信息             | String           | ——     | no       |      |
+| border          | 是否显示边框                   | Boolean          | true   | no       |      |
+| clickable       | 是否开启点击反馈               | Boolean          | false  | no       |      |
+| is-link         | 是否展示右侧箭头并开启点击反馈 | Boolean          | false  | no       |      |
+| v-model         | stepper当前输入值              | String \| Number | 最小值 | no       |      |
+| disabled        | stepper是否禁用                | Boolean          | false  | no       |      |
+| *disable-input* | *是否禁用输入框*               | Boolean          | false  | no       |      |
+| min             | stepper最小值                  | String \| Number | 1      | no       |      |
+| max             | stepper最大值                  | String \| Number | ——     | no       |      |
+| step            | stepper步数                    | String \| Number | 1      | no       |      |
 
 ------
 
@@ -337,6 +339,7 @@ Vue.use(DatePicker)
 | type                | 类型，可选值为date,time,year-month,datetime     | String   | Date       | no       |      |
 | default-date        | 日期弹出层的默认显示日期                        | Date     | 当前时间   | no       |      |
 | is-sel              | 是否可以选择日期                                | Boolean  | true       | no       |      |
+| label               | 输入框左侧文本                                  | String   | ——         | no       |      |
 | *border*            | *是否显示内边框*                                | Boolean  | true       | no       |      |
 | *label-align*       | *文本对齐方式，可选值为left center right*       | String   | left       | no       |      |
 | *input-align*       | *输入框内容对齐方式，可选值为left center right* | String   | left       | no       |      |
